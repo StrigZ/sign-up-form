@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --submit-button-clr: #596D48
+    --input-border-clr: #E5E7EB
+    --input-invalid-border-clr: red
+    --input-selected-border-clr: blue
+    
+}
