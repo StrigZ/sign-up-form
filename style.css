@@ -150,8 +150,23 @@ form {
     }
   }
 
+  .invalid,
+  #password-match {
+    color: red;
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    &::before {
+      content: "* ";
+    }
+  }
+
   .invalid {
     display: none;
+  }
+
+  input:invalid:not(:placeholder-shown) + .invalid {
+    display: block;
   }
 }
 
@@ -168,4 +183,8 @@ form {
       text-decoration: underline;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
