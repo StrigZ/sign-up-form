@@ -11,6 +11,7 @@
   --input-border-clr: #e5e7eb;
   --input-invalid-border-clr: red;
   --input-selected-border-clr: blue;
+  --padding-left: 32px;
 }
 
 @font-face {
@@ -72,6 +73,7 @@ main {
 
   > section {
     padding: clamp(4px, 5vw, 25%) clamp(4px, 2.5vw, 32px);
+    padding-left: var(--padding-left);
   }
 
   section > p {
@@ -96,7 +98,8 @@ form {
   > section {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     padding: 16px 32px 24px;
-    margin-bottom: 16px;
+    padding-left: var(--padding-left);
+    margin-bottom: 32px;
 
     > div {
       display: flex;
@@ -121,6 +124,26 @@ form {
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.025em;
+      }
+    }
+  }
+
+  > div {
+    padding-left: var(--padding-left);
+
+    button {
+      padding: 12px 36px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font: inherit;
+      font-weight: 600;
+      background-color: var(--submit-button-clr);
+      box-shadow: 0 0 4px rgb(0, 0, 0, 0.25);
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(150%);
       }
     }
   }
